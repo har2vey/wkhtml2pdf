@@ -1,12 +1,12 @@
 {
-    "name": "nitmedia/wkhtml2pdf",
+    "name": "har2vey/wkhtml2pdf",
     "description": "Html 2 Pdf - using wkhtml2pdf, work on 32bit and 64 bit linux + MacOS",
     "license": "MIT",
     "keywords": ["laravel","illuminate","pdf","wkhtmltopdf","wkhtml2pdf"],
     "authors": [
         {
-            "name": "Nithin Meppurathu",
-            "email": "admin@nitmedia.com"
+            "name": "Harvey Wong",
+            "email": "me@harvey.io"
         }
     ],
     "require": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Nitmedia\\Wkhtml2pdf": "src/"
+            "har2vey\\Wkhtml2pdf": "src/"
         }
     },
     "minimum-stability": "dev"

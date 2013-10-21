@@ -1,4 +1,4 @@
-<?php namespace Nitmedia\Wkhtml2pdf\Facades;
+<?php namespace har2vey\Wkhtml2pdf\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

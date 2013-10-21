@@ -1,4 +1,4 @@
-<?php namespace Nitmedia\Wkhtml2pdf;
+<?php namespace har2vey\Wkhtml2pdf;
 
 use \Exception;
 use Illuminate\View\Environment;
@@ -228,16 +228,22 @@ class Wkhtml2pdf
         }
     }
 
-    public function html($view, $data= array(), $name='file')
+    public function html($mode, $view, $data= array(), $name='myPDF')
     {
         $this->setHtml($this->view->make($view,$data));
-        return $this->output($this->getOutputMode(), $name . ".pdf");
+        return $this->output($mode, $name . ".pdf");
     }
-
-    public function url($url, $name='file')
+    
+    public function url($mode, $url, $name='myPDF')
     {
         $this->setHttpUrl($url);
-        return $this->output($this->getOutputMode(), $name . ".pdf");
+        return $this->output($mode, $name . ".pdf");
+    }
+    
+    public function save($view, $data= array(), $path='/html2pdf/myPDF')
+    {
+        $this->setHtml($this->view->make($view,$data));
+        return $this->output($this::MODE_SAVE, $path . ".pdf");
     }
 
     /**

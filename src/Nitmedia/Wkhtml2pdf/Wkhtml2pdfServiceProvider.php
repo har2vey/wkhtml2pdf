@@ -1,4 +1,4 @@
-<?php namespace Nitmedia\Wkhtml2pdf;
+<?php namespace har2vey\Wkhtml2pdf;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class Wkhtml2pdfServiceProvider extends ServiceProvider {
 
 	public function boot()
 	{
-		$this->package('Nitmedia/Wkhtml2pdf');
+		$this->package('har2vey/Wkhtml2pdf');
 	}
 
 	/**
