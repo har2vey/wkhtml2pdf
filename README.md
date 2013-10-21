@@ -4,11 +4,11 @@ Version 1.0 - Laravel 4 - Html to PDF Composer Package
 
 #Usage#
 
-	return PDF::html('hello'); // hello is naw of blade template
+	return PDF::html('hello'); // hello is name of blade template
 	
 	return PDF::html('hello',array('name' => 'Nithin')); // pass variables for the view as second option
 	
-	return PDF::html('hello',array('name' => 'Nithin'), 'New File'); // thrid option is for the name of the pdf file thats generated
+	return PDF::html('hello',array('name' => 'Nithin'), 'New File'); // third option is for the name of the pdf file thats generated
 
 	PDF::url('http://google.com'); // Pdf from url
 
