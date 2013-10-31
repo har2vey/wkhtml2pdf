@@ -4,13 +4,20 @@ Version 1.0 - Laravel 4 - Html to PDF Composer Package
 
 #Usage#
 
-	return PDF::html('hello'); // hello is name of blade template
-	
-	return PDF::html('hello',array('name' => 'Nithin')); // pass variables for the view as second option
-	
-	return PDF::html('hello',array('name' => 'Nithin'), 'New File'); // third option is for the name of the pdf file thats generated
+	MODE_DOWNLOAD = 'D';              // Force the client to download PDF file
+        MODE_STRING = 'S';                // Returns the PDF file as a string
+        MODE_EMBEDDED = 'I';              // When possible, force the client to embed PDF file
+        MODE_SAVE = 'F';                  // PDF file is saved on the server. The path+filename is returned.
 
-	PDF::url('http://google.com'); // Pdf from url
+    PDF::url('I', 'http://www.anywebsite.com'); // Generate Pdf from web url
+
+    PDF::html('I', 'hello'); // Return a PDF in browser generated from laravel view/hello.php
+
+    PDF::html('I', 'hello',array('data' => $data)); // Return a PDF from view/hello.php with added parameters
+
+    PDF::html('D', 'hello',array('message' => 'hello'), 'myFile'); // Return a PDF download dialog named myFile.pdf from view/hello.php with added parameters 
+
+    PDF::save('hello',array('message' => 'hello'), '../app/storage/pdf/hello.pdf'); // Saving pdf without output (Mode is not applicable)
 
 ## Quick start
 
