@@ -4,7 +4,7 @@ Version 1.0 - Laravel 4 - Html to PDF Composer Package
 
 #Usage#
 
-	MODE_DOWNLOAD = 'D';              // Force the client to download PDF file
+		MODE_DOWNLOAD = 'D';              // Force the client to download PDF file
         MODE_STRING = 'S';                // Returns the PDF file as a string
         MODE_EMBEDDED = 'I';              // When possible, force the client to embed PDF file
         MODE_SAVE = 'F';                  // PDF file is saved on the server. The path+filename is returned.
@@ -25,7 +25,15 @@ Version 1.0 - Laravel 4 - Html to PDF Composer Package
 
 In the `require` key of `composer.json` file add the following
 
-    "nitmedia/wkhtml2pdf": "dev-master"
+    "nitmedia/wkhtml2pdf": "dev-feature"
+To use the forked branch add the following in the `repositories` key
+
+	"repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/har2vey/wkhtml2pdf"
+        }
+    ],
 
 Run the Composer update comand
 
